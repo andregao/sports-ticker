@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Andre Gao</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>SPORTBOOK TICKER</h1>
+    </header>
+    <main>
+      <div class="ticker-container">
+        <div class="ticker"></div>
+      </div>
+      <div class="controls">
+        <button class="button start" onclick="handleStart()">START</button>
+        <button class="button stop" onclick="handleStop()" disabled>
+          STOP
+        </button>
+        <button class="button" onclick="handleReload()">RELOAD</button>
+      </div>
+      <div class="blocker">
+        <button class="button block" onclick="handleBlock()">
+          BLOCK UI THREAD
+        </button>
+        <p class="block-message"></p>
+      </div>
+      <div class="data-selection">
+        <h4>Choose Data Set</h4>
+        <div class="radio-buttons">
+          <div>
+            <input type="radio" id="mlb" name="dataset" value="MLB" checked />
+            <label for="mlb">MLB</label>
+          </div>
+          <div>
+            <input type="radio" id="nfl" name="dataset" value="NFL" />
+            <label for="nfl">NFL</label>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <hr />
+      <div class="footer-text">
+        <p>Code Test for KonekTV</p>
+        <p><a href="https://andregao.com">Andre Gao</a> 2019</p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

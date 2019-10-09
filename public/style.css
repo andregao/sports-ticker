@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+a,
+a:visited {
+  color: darkgray;
+}
+
+h1 {
+  text-align: center;
+  padding: 1.5rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+main {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+@keyframes tickerKeyframes {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.ticker-container {
+  overflow: hidden;
+  background-color: royalblue;
+  color: white;
+  white-space: nowrap;
+  position: relative;
+  height: 4rem;
+  padding-top: 10px;
+  border-bottom: 2px solid gold;
+}
+
+.ticker {
+  position: absolute;
+  left: 100%;
+  animation-name: none;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  display: none;
+  font-size: 1.2rem;
+  padding-top: 10px;
+}
+
+.ticker-item {
+  padding: 0.7rem;
+  border-right: 1px solid white;
+}
+
+.ticker-item:last-child {
+  border-right: none;
+}
+
+.ticker-item-title {
+  color: gold;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.ticker-item-number {
+  font-weight: bold;
+  margin-left: 0.2rem;
+}
+
+.controls {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 500px;
+}
+
+.blocker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block-message {
+  margin: 1rem;
+  height: 3rem;
+}
+
+.button {
+  background-color: mediumvioletred;
+  color: white;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  border-width: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.data-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-buttons {
+  display: flex;
+}
+
+.radio-buttons > * {
+  padding: 1rem 2rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-text {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
